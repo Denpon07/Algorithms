@@ -34,25 +34,21 @@ public class MergeSorter implements Sorter {
 
             if (input.get(leftIndex) <= input.get(rightIndex)) {
 
-                tempArray.add(input.get(leftIndex));
-                leftIndex++;
+                tempArray.add(input.get(leftIndex++));
 
             } else {
 
-                tempArray.add(input.get(rightIndex));
-                rightIndex++;
+                tempArray.add(input.get(rightIndex++));
 
             }
         }
 
         while (leftIndex <= middle) {
-            tempArray.add(input.get(leftIndex));
-            leftIndex++;
+            tempArray.add(input.get(leftIndex++));
         }
 
         while (rightIndex <= right) {
-            tempArray.add(input.get(rightIndex));
-            rightIndex++;
+            tempArray.add(input.get(rightIndex++));
         }
 
 
