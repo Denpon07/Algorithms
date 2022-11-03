@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         int a,b,n = 0;
+        long firstNumberFactorial,secondNumberFactorial;
 
         Scanner scanner = new Scanner(System.in);
         Factorial factorial = new Factorial();
@@ -13,13 +14,13 @@ public class Main {
         System.out.println("Enter number for calculations factorial");
         int c  = scanner.nextInt();
 
-        a = factorial.cycleExecute(c);
-        b = factorial.recursionExecute(c);
+        firstNumberFactorial = factorial.cycleExecute(c);
+        secondNumberFactorial = factorial.recursionExecute(c);
 
         System.out.println(factorial.cycleExecute(n));
 
-        assert (a == b);
-        System.out.println("Factorial search result with number " + n + " by using cycle = " + a);
+        assert (firstNumberFactorial == secondNumberFactorial);
+        System.out.println("Factorial search result with number " + n + " by using cycle = " + firstNumberFactorial);
 
         System.out.println("Enter number for calculations fibonacci");
         n = scanner.nextInt();
